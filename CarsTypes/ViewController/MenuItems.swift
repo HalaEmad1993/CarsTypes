@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-   
-struct MenuItems {
-//    let All=[.Home,.Favourite,.sellYourCar,.AboutUS,.ContactUs,.PrivacyPolicy,.Arabic,.Logout]
+
 enum MenuItemData{
+ static  let All=[Home,Favourite,sellYourCar,AboutUS,ContactUs,PrivacyPolicy,Arabic,Logout]
+
     case Home
     case Favourite
     case sellYourCar
@@ -21,9 +21,6 @@ enum MenuItemData{
     case Arabic
     case Logout
 
-//
-
-    
     var imgeMenu:UIImage?{
         switch self{
             
@@ -95,4 +92,4 @@ enum MenuItemData{
     
     
 }
-}
+

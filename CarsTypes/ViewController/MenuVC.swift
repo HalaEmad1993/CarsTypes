@@ -8,7 +8,7 @@
 import UIKit
 
 class MenuVC: UIViewController {
-    var item:[MenuItems.MenuItemData]=[]
+    var item:[MenuItemData]=[]
     
     @IBOutlet weak var RegisterCell: UITableView!
     override func viewDidLoad() {
@@ -18,14 +18,7 @@ class MenuVC: UIViewController {
 
         RegisterCell.delegate = self
         RegisterCell.dataSource = self
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
-        print("hgjhkhklkl")
+       
 
 
     }
@@ -34,16 +27,7 @@ class MenuVC: UIViewController {
         RegisterCell.register(cell, forCellReuseIdentifier: "MenuCell")
     }
     func setupMenuData(){
-        item.append(MenuItems.MenuItemData.Home)
-        item.append(MenuItems.MenuItemData.Favourite)
-        item.append(MenuItems.MenuItemData.sellYourCar)
-        item.append(MenuItems.MenuItemData.AboutUS)
-        item.append(MenuItems.MenuItemData.ContactUs)
-        item.append(MenuItems.MenuItemData.PrivacyPolicy)
-        item.append(MenuItems.MenuItemData.Arabic)
-        item.append(MenuItems.MenuItemData.Logout)
-
-        
+        item=MenuItemData.All
         
     }
 
