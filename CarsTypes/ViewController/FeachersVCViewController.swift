@@ -15,7 +15,11 @@ class FeachersVCViewController: UIViewController {
         cellRegistration()
         FeachersCellRegistration.dataSource = self
         FeachersCellRegistration.delegate = self
-        
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
 
     }
     

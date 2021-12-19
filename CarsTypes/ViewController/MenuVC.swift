@@ -14,10 +14,14 @@ class MenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
-//        setupMenuData()
+        setupMenuData()
 
         RegisterCell.delegate = self
         RegisterCell.dataSource = self
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
 
 
     }
