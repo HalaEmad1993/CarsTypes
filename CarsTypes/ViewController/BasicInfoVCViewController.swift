@@ -9,21 +9,30 @@ import UIKit
 
 class BasicInfoVCViewController: UIViewController {
 
+    @IBOutlet weak var BasicInfoCell: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        cellRegistration()
+        BasicInfoCell.dataSource = self
+        BasicInfoCell.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func cellRegistration() {
+        let cell = UINib(nibName: "BasicInfoCellTableViewCell", bundle: nil)
+        BasicInfoCell.register(cell, forCellReuseIdentifier: "BasicInfoCellTableViewCell")
+  
+    }}
+    extension BasicInfoVCViewController : UITableViewDelegate , UITableViewDataSource {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            let cell : BasicInfoCellTableViewCell = BasicInfoCell.dequeueReusableCell(withIdentifier: "BasicInfoCellTableViewCell") as! BasicInfoCellTableViewCell
+            return cell
+        }
+        
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 10
+        }
     }
-    */
-
-}

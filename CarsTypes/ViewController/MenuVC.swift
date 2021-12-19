@@ -8,30 +8,51 @@
 import UIKit
 
 class MenuVC: UIViewController {
-
+    var item:[MenuItems.MenuItemData]=[]
+    
     @IBOutlet weak var RegisterCell: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        cellRegistration()
+//        setupMenuData()
+
         RegisterCell.delegate = self
         RegisterCell.dataSource = self
+
 
     }
     func cellRegistration() {
         let cell = UINib(nibName: "MenuCell", bundle: nil)
         RegisterCell.register(cell, forCellReuseIdentifier: "MenuCell")
     }
+    func setupMenuData(){
+        item.append(MenuItems.MenuItemData.Home)
+        item.append(MenuItems.MenuItemData.Favourite)
+        item.append(MenuItems.MenuItemData.sellYourCar)
+        item.append(MenuItems.MenuItemData.AboutUS)
+        item.append(MenuItems.MenuItemData.ContactUs)
+        item.append(MenuItems.MenuItemData.PrivacyPolicy)
+        item.append(MenuItems.MenuItemData.Arabic)
+        item.append(MenuItems.MenuItemData.Logout)
+
+        
+        
+    }
 
 }
 
-extension MenuVc : UITableViewDelegate , UITableViewDataSource {
+extension MenuVC : UITableViewDelegate , UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return item.count
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : MenuCell = RegisterCell.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        cell.ConfigureMenuCell(item: item[indexPath.row])
+        
         return cell
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
-    }
+  
 }

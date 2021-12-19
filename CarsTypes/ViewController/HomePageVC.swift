@@ -9,21 +9,36 @@ import UIKit
 
 class HomePageVC: UIViewController {
 
+    @IBOutlet weak var displayHomeTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        CellRegistration()
+        displayHomeTable.delegate =  self
+        displayHomeTable.dataSource = self
+        
+        
     }
     
+    func CellRegistration() {
+        let cell = UINib(nibName: "homePage", bundle: nil)
+        displayHomeTable.register(cell, forCellReuseIdentifier: "homePage")
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+   
+}
 
+extension HomePageVC : UITableViewDelegate , UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:homePage = displayHomeTable.dequeueReusableCell(withIdentifier: "homePage") as! homePage
+        return cell
+    }
+    
+    
+    
 }
