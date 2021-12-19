@@ -22,6 +22,10 @@ class MenuVC: UIViewController {
         print("hgjhkhklkl")
         print("hgjhkhklkl")
         print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
+        print("hgjhkhklkl")
 
 
     }
