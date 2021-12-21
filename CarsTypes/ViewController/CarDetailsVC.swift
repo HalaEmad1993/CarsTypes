@@ -44,11 +44,8 @@ extension CarDetailsVC:UICollectionViewDelegate,UICollectionViewDataSource{
         let cell = carImageCollection.dequeueReusableCell(withReuseIdentifier: "CarImageCell", for: indexPath)
         return cell
     }
-    
-    
-    
-    
-}
+            
+    }
 
 extension CarDetailsVC:UICollectionViewDelegateFlowLayout{
     func collectionView(

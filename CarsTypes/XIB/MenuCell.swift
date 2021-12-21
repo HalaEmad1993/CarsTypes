@@ -21,10 +21,10 @@ class MenuCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    
-    func ConfigureMenuCell(item:MenuItems.MenuItemData){
-        MenuItemLabel.text = item.menueName
-        IconMenue.image=item.imgeMenu
-    }
+//
+//    func ConfigureMenuCell(item:MenuItems.MenuItemData){
+//        MenuItemLabel.text = item.menueName
+//        IconMenue.image=item.imgeMenu
+//    }
     
 }

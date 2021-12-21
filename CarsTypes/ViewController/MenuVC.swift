@@ -40,7 +40,7 @@ extension MenuVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : MenuCell = RegisterCell.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
-        cell.ConfigureMenuCell(item: item[indexPath.row])
+//        cell.ConfigureMenuCell(item: item[indexPath.row])
         
         return cell
     }
