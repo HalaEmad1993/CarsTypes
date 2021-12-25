@@ -63,7 +63,7 @@
                 <outlet property="IconMenue" destination="jTx-s9-c7c" id="tdp-6h-h7n"/>
                 <outlet property="MenuItemLabel" destination="BhY-ff-ByW" id="9SS-VP-qu2"/>
             </connections>
-            <point key="canvasLocation" x="100" y="-27"/>
+            <point key="canvasLocation" x="207" y="-38"/>
         </tableViewCell>
     </objects>
     <resources>

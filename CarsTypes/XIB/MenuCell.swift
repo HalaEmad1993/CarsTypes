@@ -10,8 +10,8 @@ import UIKit
 class MenuCell: UITableViewCell {
 
     @IBOutlet weak var IconMenue: UIImageView!
-    
     @IBOutlet weak var MenuItemLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,10 +21,10 @@ class MenuCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-//
-//    func ConfigureMenuCell(item:MenuItems.MenuItemData){
-//        MenuItemLabel.text = item.menueName
-//        IconMenue.image=item.imgeMenu
-//    }
+
+    func ConfigureMenuCell(item:MenuItemData){
+        MenuItemLabel.text = item.menueName
+        IconMenue.image=item.imgeMenu
+    }
     
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 import CoreData
+extension UIStoryboard{
+    
+    static let mainStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
+}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

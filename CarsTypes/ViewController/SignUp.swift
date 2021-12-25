@@ -12,10 +12,15 @@ class SignUp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
     
 
-  
+    @IBAction func backButton(_ sender: Any) {
+//        let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "LogInVC")
+//        navigationController?.popToViewController(vc, animated: true)
+        navigationController?.popViewController(animated: true)
+    }
+    
     
 }

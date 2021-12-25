@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-enum MenuItemData{
+enum MenuItemData {
  static  let All=[Home,Favourite,sellYourCar,AboutUS,ContactUs,PrivacyPolicy,Arabic,Logout]
 
     case Home

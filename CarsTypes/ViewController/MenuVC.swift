@@ -11,11 +11,11 @@ class MenuVC: UIViewController {
     var item:[MenuItemData]=[]
     
     @IBOutlet weak var RegisterCell: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
         setupMenuData()
-
         RegisterCell.delegate = self
         RegisterCell.dataSource = self
        
@@ -40,7 +40,7 @@ extension MenuVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : MenuCell = RegisterCell.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
-//        cell.ConfigureMenuCell(item: item[indexPath.row])
+        cell.ConfigureMenuCell(item: item[indexPath.row])
         
         return cell
     }
