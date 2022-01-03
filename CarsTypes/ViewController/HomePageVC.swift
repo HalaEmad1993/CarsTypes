@@ -8,12 +8,12 @@
 import UIKit
 
 class HomePageVC: UIViewController {
-
+    var cars:[Datas]=[]
     @IBOutlet weak var displayHomeTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Home()
         CellRegistration()
         displayHomeTable.delegate =  self
         displayHomeTable.dataSource = self
@@ -31,14 +31,26 @@ class HomePageVC: UIViewController {
 
 extension HomePageVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.cars.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:homePage = displayHomeTable.dequeueReusableCell(withIdentifier: "homePage") as! homePage
+        cell.configure(cardata: self.cars[indexPath.row])
         return cell
     }
     
     
     
+}
+
+extension HomePageVC {
+    func Home () {
+            
+        UserApiController.HomeData { Status, carsData in
+            self.cars=carsData ?? []
+            self.displayHomeTable.reloadData()
+        }
+    }
 }

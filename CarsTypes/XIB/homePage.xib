@@ -206,6 +206,16 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="AutomaticLabel" destination="mEA-4X-L0I" id="trY-Oa-hfc"/>
+                <outlet property="carImage" destination="t2Z-cC-Nrj" id="XFl-6r-uG5"/>
+                <outlet property="doorsLabel" destination="qki-68-VHW" id="k2U-hU-nGL"/>
+                <outlet property="locationCar" destination="UPa-g8-oRk" id="WGc-G7-4RM"/>
+                <outlet property="nameCarLabel" destination="yFv-DW-9pe" id="61k-WQ-r8P"/>
+                <outlet property="personLabel" destination="IyJ-33-vWI" id="7w7-3f-644"/>
+                <outlet property="petrolLabel" destination="X6g-XJ-aRa" id="p5u-9Y-Ahx"/>
+                <outlet property="speedLabel" destination="6C3-J1-GBp" id="OQu-P1-Tzc"/>
+            </connections>
             <point key="canvasLocation" x="35.507246376811594" y="106.47321428571428"/>
         </tableViewCell>
     </objects>

@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
 extension UIStoryboard{
     
     static let mainStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -15,9 +16,12 @@ extension UIStoryboard{
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.shared.enable = true
+
         // Override point for customization after application launch.
         return true
     }

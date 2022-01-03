@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class UIImageViewDesignable: UIImageView {
     
-    @IBInspectable var bgColor: UIColor = UIColor.clear
+    @IBInspectable var bgColor: UIColor = UIColor.white
     
     @IBInspectable var cornerRadius: CGFloat = 0
     
@@ -41,10 +41,8 @@ class UIImageViewDesignable: UIImageView {
         layer.shadowOpacity = shadowOpacity
         
         if flipInRTL {
-            if L102Language.currentAppleLanguage().elementsEqual("ar"){
                 if let _img = image {
                     image =  _img.imageFlippedForRightToLeftLayoutDirection()
-                }
             }
         }
     }

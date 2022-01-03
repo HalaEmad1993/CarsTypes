@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class UIButtonDesignable: UIButton {
     
-    @IBInspectable var bgColor: UIColor = UIColor.orange
+    @IBInspectable var bgColor: UIColor = UIColor.white
     
     @IBInspectable var cornerRadius: CGFloat = 0
     

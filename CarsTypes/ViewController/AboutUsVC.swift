@@ -7,40 +7,24 @@
 
 import UIKit
 import WebKit
-//import SVProgressHUD
 class AboutUsVC: UIViewController {
 
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var aboutUsText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        aboutUs()
 
-        initializeView()
-        
-    }
-    private func initializeView(){
-//        setupWebView()
     }
 
 }
-//
-//extension AboutUsVC: WKNavigationDelegate{
-//    private func setupWebView(){
-//        let url = URL(string: "https://developer.apple.com/documentation/webkit")
-//        let request = URLRequest(url: url!)
-//        webView.load(request)
-//        webView.allowsBackForwardNavigationGestures = true
-//        webView.navigationDelegate = self
-//    }
-//
-//    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-//        SVProgressHUD.show(withStatus: "Loading...")
-//    }
-//
-//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//        SVProgressHUD.dismiss()
-//    }
-//
-//    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-//        SVProgressHUD.dismiss()
-//    }
-//}
+
+extension AboutUsVC {
+    func aboutUs () {
+        UserApiController.AboutUs { status, message in
+            if status == true {
+                self.aboutUsText.text = message
+            }
+        }
+    }
+}

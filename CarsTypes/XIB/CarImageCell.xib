@@ -59,6 +59,9 @@
                 <constraint firstAttribute="bottom" secondItem="MCS-9I-ZWb" secondAttribute="bottom" constant="10" id="uj7-3T-xmt"/>
             </constraints>
             <size key="customSize" width="154" height="112"/>
+            <connections>
+                <outlet property="carPhoto" destination="d9e-vl-6EJ" id="pOe-I6-r13"/>
+            </connections>
             <point key="canvasLocation" x="247.10144927536234" y="91.741071428571431"/>
         </collectionViewCell>
     </objects>

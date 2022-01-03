@@ -46,7 +46,6 @@ class UIViewCustomCornerRadius: UIView {
     private  func setCustomCorners() {
         
         if flipInRtl{
-            if L102Language.isRTL{
                 let tl = topLeftCorner
                 let tr = topRightCorner
                 let bl = bottomLeftCorner
@@ -56,7 +55,6 @@ class UIViewCustomCornerRadius: UIView {
                 topRightCorner = tl
                 bottomLeftCorner = br
                 bottomRightCorner = bl
-            }
         }
         
         let minx = self.layer.bounds.minX

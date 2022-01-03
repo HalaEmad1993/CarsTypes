@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Privacy - Camera Usage Description </key>
+	<string>$(PRODUCT_NAME) camera use</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) want to Access photos</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ubuntu-Bold.ttf</string>
@@ -14,6 +18,21 @@
 		<string>Ubuntu-Regular.ttf</string>
 		<string>UFL.txt</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true/>
+            <key>NSExceptionDomains</key>
+            <dict>
+                <key>yourdomain.com</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key>
+                    <true/>
+                    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                    <false/>
+                </dict>
+           </dict>
+      </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
